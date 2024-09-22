@@ -1,6 +1,6 @@
 # mermaid_spec.rb
 require 'rspec'
-require './lib/mermaid'
+require '../lib/mermaid.rb'
 
 describe Mermaid do
   it 'is an instance of mermaid' do
@@ -10,15 +10,15 @@ describe Mermaid do
 
   it 'has a name' do
     mermaid = Mermaid.new('Sereia')
-    expect(mermaid.name).to eq 'Sereia'
+    expect(mermaid.name).to eq('Sereia')
   end
   
   it 'has an age' do
     mermaid = Mermaid.new('Sereia')
-    expect(mermaid.age).to eq 22
+    expect(mermaid.age).to eq(22)
   end
   
-  it 'has can get older' do
+  it 'can get older' do
     mermaid = Mermaid.new('Sereia')
     mermaid.get_older
     expect(mermaid.age).to eq 23
